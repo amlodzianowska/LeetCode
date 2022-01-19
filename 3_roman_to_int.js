@@ -22,15 +22,7 @@ var romanToInt = function(s) {
     }
     return total
 };
-// if (s[i] == "V" || s[i] == "L" || s[i] == "D")
-romanToInt("MMMIV")
-console.log("************************")
-romanToInt("MMIV")
-console.log("************************")
-romanToInt("XL")
-console.log("************************")
-romanToInt("XXXIII")
-console.log("************************")
+
 console.log(romanToInt("MMCCCXCIX"))
 console.log("************************")
 console.log(romanToInt("MMMCXXIV"))
