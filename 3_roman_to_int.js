@@ -16,7 +16,6 @@ var romanToInt = function(s) {
             i++
         }
         else {
-            console.log("I is now ", i, s[i])
             total = total + numerals[s[i]]
         }
     }
@@ -24,6 +23,5 @@ var romanToInt = function(s) {
 };
 
 console.log(romanToInt("MMCCCXCIX"))
-console.log("************************")
 console.log(romanToInt("MMMCXXIV"))
 
