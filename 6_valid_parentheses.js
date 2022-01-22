@@ -31,6 +31,28 @@ var isValid = function(str) {
         return false
     }
 };
+var bracesValid = function(str) {
+    const bracesStack = [];
+    const openBraces = "([{";
+    const closeMatches = {
+        ")": "(",
+        "]": "[",
+        "}": "}"
+    };
+
+    for (let i=0; i < str.length; i++) {
+        if (openBraces.includes(str[i])) {
+            bracesStack.push(str[i]);
+        } else if (str[i] in closeMatches) {
+            if (closeMatches[str[i]] === bracesStack[bracesStack.length-1]) {
+                bracesStack.pop();
+            } else {
+                return false;
+            }
+        }
+    }return bracesStack.length === 0
+}
+
 
 console.log(isValid("(())[]{}"))
 console.log(isValid("(])"))
